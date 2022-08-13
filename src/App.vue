@@ -58,9 +58,11 @@
       </el-menu>
     </el-aside>
     <el-container class="content">
+      <Header></Header>
       <div class="main">
         <router-view />
       </div>
+      <Footer></Footer>
     </el-container>
   </el-container>
   <el-container v-else class="container">
@@ -72,10 +74,13 @@
 import {onUnmounted, reactive} from "vue";
 import {useRouter} from 'vue-router'
 import {localGet, pathMap} from "./utils/index.js";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 export default {
   name: 'App',
   components: {
-
+    Footer,
+    Header
   },
   setup () {
     const state = reactive({
