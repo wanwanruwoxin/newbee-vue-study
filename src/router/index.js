@@ -31,6 +31,21 @@ const router = createRouter({
             path: '/swiper',
             name: 'swiper',
             component: () => import('../views/Swiper.vue')
+        },
+        {
+            path: '/hot',
+            name: 'hot',
+            component: () => import('../views/Hot.vue')
+        },
+        {
+            path: '/new',
+            name: 'new',
+            component: () => import( '../views/Hot.vue')
+        },
+        {
+            path: '/recommend',
+            name: 'recommend',
+            component: () => import('../views/Hot.vue')
         }
     ]
 })
