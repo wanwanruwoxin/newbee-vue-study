@@ -46,6 +46,28 @@ const router = createRouter({
             path: '/recommend',
             name: 'recommend',
             component: () => import('../views/Hot.vue')
+        },
+        {
+            path: '/category',
+            name: 'category',
+            component: () => import('../views/Category.vue'),
+            children: [
+                {
+                    path: '/category/level2',
+                    name: 'level2',
+                    component: () => import('../views/Category.vue'),
+                },
+                {
+                    path: '/category/level3',
+                    name: 'level3',
+                    component: () => import('../views/Category.vue'),
+                }
+            ]
+        },
+        {
+            path: '/good',
+            name: 'good',
+            component: () => import('../views/Good.vue')
         }
     ]
 })
